@@ -54,3 +54,5 @@ ISPARTA
 Sonuç:
 ısparta
 ```
+
+\#2020-01-06
