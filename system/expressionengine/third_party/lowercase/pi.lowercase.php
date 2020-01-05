@@ -41,6 +41,13 @@ class lowercase
 
 		$str = $this->EE->TMPL->parse_globals($this->EE->TMPL->tagdata);
 
+		$lang = $this->EE->TMPL->fetch_param('lang');
+
+		if ($lang == 'tr')
+		{
+			$str = str_replace('I', 'ı', $str);
+		}
+
 		$this->return_data = mb_strtolower($str, 'UTF-8');
 	}
 
@@ -62,15 +69,28 @@ class lowercase
 ?>
 
 		The tag pair is simply:
-		{exp:lowercase}İSTANBUL{/exp:lowercase}
+		{exp:lowercase}ISPARTA{/exp:lowercase}
 
 		Example usage:
 
-		İSTANBUL
+		ISPARTA
 
 		becomes:
 
-		istanbul
+		isparta
+
+		<br><br>
+
+		The tag pair is simply:
+		{exp:lowercase lang="tr"}ISPARTA{/exp:lowercase}
+
+		Example usage:
+
+		ISPARTA
+
+		becomes:
+
+		ısparta
 <?php
 		$buffer = ob_get_contents();
 
