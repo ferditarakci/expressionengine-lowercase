@@ -1,7 +1,7 @@
 # ExpressionEngine 2.x String to Lowercase Plugin
 
 
-### This function runs mb_strtolower() on a string of ExpressionEngine Template.
+### This function runs mb_strtolower() on a string of ExpressionEngine 2.x Template.
 ```
 The tag pair is simply:
 {exp:lowercase}İSTANBUL{/exp:lowercase}
